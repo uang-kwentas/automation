@@ -4,7 +4,7 @@ Library    Collections
 Library    String
 Library    BuiltIn
 Library    random
-Resource   ../common/common.py
+#Resource   ../common/common.py
 Resource   ../resources/keywords.robot
 Resource   ../variables/variables.robot
 #Resource   ../variables/locators.robot
@@ -51,13 +51,13 @@ Confirm Dashboard Navigation
     Input Text                     ${course_search_bar}    ${search_data}
     Sleep                                                       1s
     Click Button                   ${course_reset_button}
-    Wait Until Element Is Visible  ${course_search_result}     5s
+    Wait Until Element Is Visible  ${course_search_result}      5s
     Page Should Contain Element    ${course_search_result}
     Element Should Be Enabled      ${course_search_result}
     Sleep                                                       1s
     Input Text                     ${course_search_bar}    ${search_data1}
-    Wait Until Element Is Visible  ${course_search_result}     1s
-    Page Should Contain Element    ${course_search_result}     5s
+    Wait Until Element Is Visible  ${course_search_result}      1s
+    Page Should Contain Element    ${course_search_result}      5s
     Element Should Be Enabled      ${course_search_result}
     Click Button                   ${course_reset_button}
     Sleep                                                       1s
@@ -78,7 +78,7 @@ Complete and Submit Course Details
     Input Text                     ${course_description}    ${modal_DESC}
     Sleep                                                      1s
     Select From List By Label      ${course_status}         ${modal_STATUS}
-    Sleep   1s
+    Sleep                                                      1s
 Confirm Save Button
     [Documentation]  Verifies the save button is enabled and clicks it
     [Tags]             CML-001
