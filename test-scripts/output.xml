@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-20T16:44:28.788611" rpa="false" schemaversion="5">
+<suite id="s1" name="Ojtactivity" source="C:\Users\DEVOJT\Downloads\REMOROZA_JOURNAL\OJT_QA\test-scripts\ojtactivity.robot">
+<test id="s1-t1" name="Master Course List" line="10">
+<kw name="Open Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:30.084115" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:4200/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-20T16:44:30.083736" elapsed="5.364215"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.448371" elapsed="0.063259"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_field}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.512015" elapsed="0.094430"/>
+</kw>
+<tag>LP-001</tag>
+<doc>Opens the browser and navigates to the login page</doc>
+<status status="PASS" start="2025-03-20T16:44:30.082641" elapsed="5.524191"/>
+</kw>
+<kw name="Verify Login Elements" owner="keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:35.628475" level="INFO">Current page contains element 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${username_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.609185" elapsed="0.019781"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.629708" elapsed="0.094042"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:35.745055" level="INFO">Current page contains element 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>${password_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.724014" elapsed="0.021205"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${password_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.745462" elapsed="0.039873"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:35.806941" level="INFO">Current page contains element 'xpath=//button[@type='submit']'.</msg>
+<arg>${login_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.785765" elapsed="0.021369"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.807456" elapsed="0.039371"/>
+</kw>
+<tag>LP-001</tag>
+<doc>Verifies essential login elements are visible and enabled</doc>
+<status status="PASS" start="2025-03-20T16:44:35.608395" elapsed="0.238718"/>
+</kw>
+<kw name="Enter Credentials" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:35.849935" level="INFO">Typing text 'admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:35.849350" elapsed="0.360516"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:36.211409" level="INFO">Typing text 'admin' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:36.210462" elapsed="0.200060"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:36.411312" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:36.410881" elapsed="0.210363"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<tag>LP-001</tag>
+<doc>Inputs username and password, then clicks login</doc>
+<status status="PASS" start="2025-03-20T16:44:35.847838" elapsed="0.773707"/>
+</kw>
+<kw name="Confirm Dashboard Navigation" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${dashboard_header}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:36.624844" elapsed="0.557811"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:37.199819" level="INFO">Current page contains element 'xpath=//h1[contains(text(), 'DASHBOARD OVERVIEW')]'.</msg>
+<arg>${dashboard_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.183075" elapsed="0.017035"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:37.201313" level="INFO">Clicking element 'xpath=(//a[normalize-space()='Course Master List'])[1]'.</msg>
+<arg>${course_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.200607" elapsed="0.207828"/>
+</kw>
+<tag>DP-001</tag>
+<doc>Verifies successful navigation to the dashboard</doc>
+<status status="PASS" start="2025-03-20T16:44:36.622356" elapsed="0.786367"/>
+</kw>
+<kw name=" Access and Search Course Master List" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${course_header}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.410565" elapsed="0.055498"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:37.488907" level="INFO">Current page contains element 'xpath=//h1[contains(., 'Course Master List')]'.</msg>
+<arg>${course_header}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.466845" elapsed="0.022283"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${course_header}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.490843" elapsed="0.039558"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:38.531769" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:37.530708" elapsed="1.001180"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:38.532677" level="INFO">Typing text '21' into text field 'xpath=(//input[@placeholder='🔍 Search All Data'])[1]'.</msg>
+<arg>${course_search_bar}</arg>
+<arg>${search_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:38.532184" elapsed="0.197624"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:39.730419" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:38.729997" elapsed="1.000577"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:39.731015" level="INFO">Clicking button 'xpath=(//button[contains(text(),'🔄 Reset')])[1]'.</msg>
+<arg>${course_reset_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:39.730776" elapsed="0.165950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:39.896975" elapsed="0.042091"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:39.954540" level="INFO">Current page contains element 'xpath=(//div[@class='table-container'])[1]'.</msg>
+<arg>${course_search_result}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:39.939708" elapsed="0.015005"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:39.954992" elapsed="0.037523"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:40.993777" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:39.992894" elapsed="1.001003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:40.994398" level="INFO">Typing text 'invalid1' into text field 'xpath=(//input[@placeholder='🔍 Search All Data'])[1]'.</msg>
+<arg>${course_search_bar}</arg>
+<arg>${search_data1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:40.994102" elapsed="0.139254"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<arg>1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:41.133798" elapsed="0.051888"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:41.197008" level="INFO">Current page contains element 'xpath=(//div[@class='table-container'])[1]'.</msg>
+<arg>${course_search_result}</arg>
+<arg>5s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:44:41.186085" elapsed="0.011039"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:44:41.197325" elapsed="0.031874"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:41.229685" level="INFO">Clicking button 'xpath=(//button[contains(text(),'🔄 Reset')])[1]'.</msg>
+<arg>${course_reset_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:41.229408" elapsed="0.138971"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:42.369869" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:41.369119" elapsed="1.000899"/>
+</kw>
+<tag>CML-001</tag>
+<doc>Clicks the Course Master List button</doc>
+<status status="PASS" start="2025-03-20T16:44:37.409994" elapsed="4.960152"/>
+</kw>
+<kw name="Complete and Submit Course Details" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:42.371122" level="INFO">Clicking element 'xpath=(//button[@class='add-btn'])'.</msg>
+<arg>${addcourse_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:42.370932" elapsed="0.359290"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${course_modal}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:44:42.730629" elapsed="0.032699"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:43.764897" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:42.763507" elapsed="1.001629"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:43.765980" level="INFO">Typing text 'Bachelor of Arts' into text field 'xpath=//input[@id='addCourseName']'.</msg>
+<arg>${coursename_field}</arg>
+<arg>${modal_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:43.765473" elapsed="0.736231"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:45.503658" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:44.502151" elapsed="1.001620"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:45.504250" level="INFO">Typing text 'BSHM462' into text field 'xpath=//input[@id='addCourseCode']'.</msg>
+<arg>${coursecode_field}</arg>
+<arg>${modal_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:45.503958" elapsed="0.520103"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:47.024951" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:46.024447" elapsed="1.000653"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:47.025547" level="INFO">Typing text 'itik' into text field 'xpath=//input[@id='addDepartment']'.</msg>
+<arg>${coursedept_field}</arg>
+<arg>${modal_DEPT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:47.025293" elapsed="0.158123"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:48.184509" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:47.183779" elapsed="1.000858"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:48.185180" level="INFO">Typing text '1' into text field 'xpath=//input[@id='addDuration']'.</msg>
+<arg>${course_duration}</arg>
+<arg>${modal_DURATION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:48.184846" elapsed="0.189326"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:49.375687" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:48.374569" elapsed="1.001248"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:49.376382" level="INFO">Typing text 'This is a course description' into text field 'xpath=//input[@id='addDescription']'.</msg>
+<arg>${course_description}</arg>
+<arg>${modal_DESC}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:49.376071" elapsed="0.260845"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:50.638063" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:49.637222" elapsed="1.000959"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:50.638654" level="INFO">Selecting options from selection list 'xpath=//select[@id='addStatus']' by label Active.</msg>
+<arg>${course_status}</arg>
+<arg>${modal_STATUS}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-20T16:44:50.638376" elapsed="0.266074"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:51.906498" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:50.905127" elapsed="1.001530"/>
+</kw>
+<tag>CML-001</tag>
+<doc>Fills in the course details and submits</doc>
+<status status="PASS" start="2025-03-20T16:44:42.370655" elapsed="9.536167"/>
+</kw>
+<kw name="Confirm Save Button" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:51.908565" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${csave}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:44:51.908235" elapsed="0.203146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:44:57.113227" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:52.111771" elapsed="5.001584"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:44:57.113692" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:44:57.113552" elapsed="0.016547"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:45:02.131566" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:44:57.130307" elapsed="5.001398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.131946" elapsed="0.025979"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:45:02.176915" level="INFO">Current page contains element 'xpath=(//div[@class='table-container'])[1]'.</msg>
+<arg>${course_search_result}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.158225" elapsed="0.018978"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${course_search_result}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.177628" elapsed="0.037323"/>
+</kw>
+<tag>CML-001</tag>
+<doc>Verifies the save button is enabled and clicks it</doc>
+<status status="PASS" start="2025-03-20T16:44:51.907630" elapsed="10.307458"/>
+</kw>
+<kw name="Perform User Logout" owner="keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:45:02.235205" level="INFO">Current page contains element 'xpath=(//button[@class='logout-btn'])'.</msg>
+<arg>${logout_button}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.215997" elapsed="0.019310"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${logout_button}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.235503" elapsed="0.035673"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:45:07.271888" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:45:02.271385" elapsed="5.003419"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:45:07.275683" level="INFO">Clicking button 'xpath=(//button[@class='logout-btn'])'.</msg>
+<arg>${logout_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:45:07.275210" elapsed="0.165846"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:45:07.441820" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:45:07.441505" elapsed="0.009313"/>
+</kw>
+<tag>CML-001</tag>
+<doc>Logs out the user</doc>
+<status status="PASS" start="2025-03-20T16:45:02.215577" elapsed="5.235423"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:45:10.452918" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:45:07.451858" elapsed="3.001221"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-20T16:45:10.453941" elapsed="2.653899"/>
+</kw>
+<doc>Validates login, dashboard navigation, course master list access,
+ course creation, and logout in one seamless flow.</doc>
+<tag>CML-001</tag>
+<tag>DP-001</tag>
+<tag>LP-001</tag>
+<status status="PASS" start="2025-03-20T16:44:30.081248" elapsed="43.027202"/>
+</test>
+<doc>This test suite verifies the functionality of the application.</doc>
+<status status="PASS" start="2025-03-20T16:44:28.793610" elapsed="44.317162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CML-001</stat>
+<stat pass="1" fail="0" skip="0">DP-001</stat>
+<stat pass="1" fail="0" skip="0">LP-001</stat>
+</tag>
+<suite>
+<stat name="Ojtactivity" id="s1" pass="1" fail="0" skip="0">Ojtactivity</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-20T16:44:30.075499" level="ERROR">Error in file 'C:\Users\DEVOJT\Downloads\REMOROZA_JOURNAL\OJT_QA\resources\keywords.robot' on line 7: Invalid resource file extension '.py'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+</errors>
+</robot>
