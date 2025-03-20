@@ -1,0 +1,1 @@
+short simple automation
