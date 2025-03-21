@@ -18,7 +18,8 @@ Master Course List
     Access and Search Course Master List
     Complete and Submit Course Details
     Confirm Save Button
+    Edit Modal Course
+    Restore And Deactivate
     Perform User Logout
-    #Toggle Course Status
-    Sleep    3s
+    Sleep   5s
     [Teardown]    Close Browser
