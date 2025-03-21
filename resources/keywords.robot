@@ -156,18 +156,6 @@ Restore And Deactivate
     Log    No alert appeared
     END
 
-
-
-# Handle alert if it appears
-${alert_present} =   Run Keyword And Return Status   Alert Should Be Present
-
-    IF  ${alert_present}
-    Handle Alert    accept
-    Log    Successfully handled alert
-    ELSE
-    Log    No alert appeared
-    END
-
 Perform User Logout
     [Documentation]  Logs out the user
     [Tags]            CML-001
