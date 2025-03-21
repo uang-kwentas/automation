@@ -33,4 +33,7 @@ test automation structure
 result structure
 ![alt text](image-2.png)
 
+![alt text](image.png)
+
+***TO RUN ROBOT***
 [robot keyword.robot]
