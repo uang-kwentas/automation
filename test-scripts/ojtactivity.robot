@@ -12,7 +12,7 @@ Master Course List Walkthrough
     Open Login Page
     Verify Login Elements
     Enter Credentials                 ${USERNAME}    ${PASSWORD}
-    Confirm Dashboard Navigation
+    Confirm Dashboard Navigation to Course Master List
     Access and Search Course Master List
     Complete and Submit Course Details
     Confirm Save Button
