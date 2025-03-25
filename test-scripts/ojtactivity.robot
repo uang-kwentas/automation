@@ -2,8 +2,10 @@
 Documentation      This test suite verifies the functionality of the application.
 ...               #Author: Joshua Remoroza
 Library           SeleniumLibrary
+Resource          ../common/common.py
 Resource          ../variables/variables.robot
 Resource          ../resources/keywords.robot
+
 *** Test Cases ***
 Master Course List Walkthrough
     [Documentation]  Validates login, dashboard navigation, course master list access,
@@ -17,6 +19,7 @@ Master Course List Walkthrough
     Complete and Submit Course Details
     Confirm Save Button
     Edit Modal Course
+    Course Restore and Deactivation thru Course Code
     Perform User Logout
     Sleep   5s
     [Teardown]    Close Browser
